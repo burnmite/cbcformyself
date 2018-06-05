@@ -1,0 +1,56 @@
+## 语法树的结构(AST文件夹)
+```
+Node
+    AST
+        ExprNode
+            AbstractAssignNode
+                AssignNode
+                OpAssignNode
+            AddressNode
+            BinaryOpNode
+                LogicalAndNode
+                LogicalOrNode
+            CastNode
+            CodeExprNode
+            FuncallNode
+            LHSNode
+                ArefNode
+                DereferenceNode
+                MemberNode
+                PtrMemberNode
+                VariableNode
+            LiteralNode
+                IntegerLiteralNode
+                StringLiteralNode
+            SizeofExprNode
+            SizeofTypeNode
+            UnaryOpNode
+                UnaryArithmeticOpNode
+                    PrefixOpNode
+                    SuffixOpNode
+        Slot
+        StmtNode
+            BlockNode
+            BreakNode
+            CaseNode
+            ContinueNode
+            DoWhileNode
+            ExprStmtNode
+            ForNode
+            GotoNode
+            IfNode
+            LabelNode
+            ReturnNode
+            SwitchNode
+            WhileNode
+        TypeDefinition
+            CompositeTypeDefinition
+                StructNode
+                UnionNode
+            TypedefNode
+        TypeNode
+```
+
+## 编写步骤
+由于Stmt系列比Expr系列更好分析，所以我们先来编写Stmt部分的内容，但是首先要写一个`ExprNode`类，因为这个类
+是一个总的表达式类，StmtNode中可能有一部分的内容需要用到`ExprNode`

@@ -1,4 +1,18 @@
 package ast;
+import java.util.*;
 
-public class BlockNode {
+// #@@Construct Method
+// BlockNode block():
+// {
+//     Token t;
+//     List<DefinedVariable> vars;
+//     List<StmtNode> stmts;
+// }
+// #@@
+
+public class BlockNode extends StmtNode{
+
+    private List<StmtNode> stmts;
+
+
 }

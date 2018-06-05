@@ -1,4 +1,5 @@
 package ast;
 
-public class StmtNode {
+public class StmtNode extends Node {
+
 }
